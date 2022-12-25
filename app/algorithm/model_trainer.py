@@ -30,19 +30,17 @@ def get_trained_model(train_data, data_schema, hyper_params):
     train_X, _, preprocess_pipe = preprocess_data(train_data, None, data_schema)
     # print('train_X shape:',  train_X.shape)  ; sys.exit()
 
-    num_clusters = data_schema["datasetSpecs"]["suggestedNumClusters"]
-
     # Create and train model
     print("Fitting model ...")
-    model = train_model(train_X, hyper_params, num_clusters)
+    model = train_model(train_X, hyper_params)
 
     return preprocess_pipe, model
 
 
-def train_model(train_X, hyper_params, num_clusters):
+def train_model(train_X, hyper_params):
     # get model hyper-paameters parameters
     data_based_params = get_data_based_model_params(train_X)
-    model_params = {**hyper_params, **data_based_params, "K": num_clusters}
+    model_params = {**hyper_params, **data_based_params}
 
     # Create and train model
     model = Model(**model_params)
