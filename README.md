@@ -1,4 +1,4 @@
-Mean Shift Model build in Sklearn for Clustering - Base problem category as per Ready Tensor specifications.
+Mean Shift Model built in Sklearn for Clustering - Base problem category as per Ready Tensor specifications.
 
 - meanshift
 - clustering
