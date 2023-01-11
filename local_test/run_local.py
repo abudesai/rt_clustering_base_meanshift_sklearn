@@ -96,7 +96,7 @@ def copy_example_files(dataset_name):
     # data
     shutil.copyfile(
         f"{local_datapath}/{dataset_name}/{dataset_name}.csv",
-        os.path.join(data_path, f"{dataset_name}_test.csv"),
+        os.path.join(data_path, f"{dataset_name}.csv"),
     )
 
 
