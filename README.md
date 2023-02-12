@@ -26,10 +26,4 @@ During the model development process, the algorithm was trained and evaluated on
 
 This Clustering Model is written using Python as its programming language. ScikitLearn is used to implement the main algorithm, evaluate the model, and preprocess the data. Numpy, pandas, Sklearn, and feature-engine are used for the data preprocessing steps.
 
-The model includes an inference service with 3 endpoints:
-
-- /ping for health check and
-- /infer for predictions with JSON input for instances, and JSON output of predictions
-- /infer_file for predictions with multi-part CSV file input for instances, and JSON output for predictions
-
-The inference service is implemented using fastapi+uvicorn.
+There are no web endpoints provided for this model. Training and prediction is performed by issuing command `train_predict` on the docker container. Also see usage in the `run_local.py` file inside `local_test` directory.
