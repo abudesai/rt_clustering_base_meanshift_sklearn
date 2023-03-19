@@ -8,8 +8,6 @@ Mean Shift Model built in Sklearn for Clustering - Base problem category as per 
 - pandas
 - numpy
 - fastapi
-- uvicorn
-- uvicorn
 - docker
 
 This is a Clustering Model that uses mean shift implemented through Sklearn.
@@ -26,4 +24,4 @@ During the model development process, the algorithm was trained and evaluated on
 
 This Clustering Model is written using Python as its programming language. ScikitLearn is used to implement the main algorithm, evaluate the model, and preprocess the data. Numpy, pandas, Sklearn, and feature-engine are used for the data preprocessing steps.
 
-There are no web endpoints provided for this model. Training and prediction is performed by issuing command `train_predict` on the docker container. Also see usage in the `run_local.py` file inside `local_test` directory.
+The model includes an inference service with 2 endpoints: `/ping` for health check and `/infer` for predictions of nearest clusters in real time. The inference service is implemented using fastapi.

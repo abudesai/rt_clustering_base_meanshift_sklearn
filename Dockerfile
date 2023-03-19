@@ -23,7 +23,8 @@ ENV PATH="/opt/app:${PATH}"
 
 
 
-RUN chmod +x train_predict 
+RUN chmod +x train_predict &&\
+    chmod +x serve 
 
 RUN chown -R 1000:1000 /opt/app/
 
